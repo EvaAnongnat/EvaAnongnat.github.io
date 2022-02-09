@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my first web</title>
+    </head>
+    <body>
+        <h1>About Me</h1>
+        <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width="700" height="400"></img>
+
+        <p>
+            Hello everyone :)
+        </p>
+        <p>
+            I am Eva but in Dragon Nest SEA you might know me as MxBunny/xMxBunny/BunnyEva/BunnyAvita.
+        </p>
+
+        <p>
+            <em>Bangkok</em> traces its roots to a small trading post during the Ayutthaya Kingdom in the 
+        15th century, which eventually grew and became the site of two capital cities: Thonburi in 
+        1768 and Rattanakosin in 1782. <em>Bangkok</em> was at the heart of the modernization of Siam, 
+        later renamed Thailand, during the late-19th century, as the country faced pressures from the 
+        West. The city was at the centre of Thailand's political struggles throughout the 20th 
+        century, as the country abolished absolute monarchy, adopted constitutional rule, and 
+        underwent numerous coups and several uprisings. The city grew rapidly during the 1960s through 
+        the 1980s and now exerts a significant impact on Thailand's politics, economy, education, 
+        media and modern society.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Bangkok">Link to Wikipedia</a>
+
+        <h2>Basic Info</h2>
+
+        <ul>
+            <li>Country: Thailand</li>
+            <li>Area: 1,568.7 sq km</li>
+            <li>Population: 8,305,218</li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Info Column</th>
+                <th>Info Value</th>
+            </tr>
+            <tr> 
+                <td>Country</td>
+                <td>Thailand</td>
+            </tr>
+            <tr>
+                <td>Population</td>
+                <td>8,305,218</td>
+            </tr>
+        </table>
+        <img src="./images/bangkok-01.jpg" alt="bangkok-01" width="30%"></img>
+        <img src="./images/bangkok-02.jpg" alt="bangkok-02" width="30%"></img>
+        <img src="./images/bangkok-03.jpg" alt="bangkok-03" width="30%"></img>
+
+        <h1>Travel reservation form</h1>
+        <h2>* denote mandotory</h2>
+        <form action="/test">
+            <label for="fname" >Full name*</label><br>
+            <input type="text" name="fname" id="fname" placeholder="FirstName LastName"><br>
+            <label for="femail" >E-mail*</label><br>
+            <input type="text" name="femail" id="femail" placeholder="EMAIL_ADDRESS"><br>
+            <label for="tour_package">Select tour package*</label><br>
+            <select name="tour_package" id="tour_package" required>
+                <option value="VVIP">Platinum</option>
+                <option value="VIP">Diamond</option>
+                <option value="Business">Gold</option>
+                <option value="Economy">Silver</option>
+            </select><br>
+            <label for="arrive_date*">Arrive Date*</label><br>
+            <input type="datetime" name="arrive_date" id="arrive_date" placeholder="m/d/y" required><br>
+            <label for="number_person">Number of persons*</label><br>
+            <input type="number" name="number_persons" id="number_persons" placeholder="Number" required><br>
+            <label for="tour_activities">Tour activities*</label><br>
+            <label for="">Boarding</label>
+            <input type="checkbox" name="Boarding" id="tour_activities1"><br>
+            <label for="">Fooding</label>
+            <input type="checkbox" name="Fooding" id="tour_activities2"><br>
+            <label for="">Sight seeing</label>
+            <input type="checkbox" name="Sight seeing" id="tour_activities3"><br>
+            <label for="discout_coupon_code">Discout coupon code</label><br>
+            <input type="text" name="fdiscout" id="fdiscout" placeholder="Code here"><br>
+            <label for="terms_and_conditions">Terms and conditions*</label><br>
+            <input type="radio" name="bool_term_yes" id="terms_and_conditions" value="true">
+            <label>I agree</label>
+            <input type="radio" name="bool_term_no" id="terms_and_conditions" value="false">
+            <label>I disagree</label><br>
+            <input type="button" name="submit" id="submit" value="Complete reservation">
+        </form>
+
+    </body>
+</html>
