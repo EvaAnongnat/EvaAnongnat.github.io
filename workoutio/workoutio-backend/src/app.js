@@ -1,25 +1,8 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+
 const mongoose = require('mongoose');
-const cors = require('cors');
-
+const app = require("../api/index");
 const PORT = process.env.PORT || 4000;
-const config = require('./config-example');
-
-const userRouter = require('./routes/user');
-
-const app = express();
-
-app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-  })
-);
-
-app.use('/users', userRouter);
-
+const config = require('./src/config-example');
 const boot = async () => {
   // Connect to mongodb
   await mongoose.connect(config.mongoUri, config.mongoOptions);
