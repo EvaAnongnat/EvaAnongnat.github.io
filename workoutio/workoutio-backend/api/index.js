@@ -2,14 +2,17 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const cors = require('cors');
-
+const config = require('../src/config-example');
 
 
 
 const userRouter = require('../src/routes/user');
 
 const app = express();
-
+app.use(async (req, res, next) => {
+    await mongoose.connect(config.mongoUri, config.mongoOptions);
+    return next();
+});
 app.use(bodyParser.json());
 app.use(
     cors({
