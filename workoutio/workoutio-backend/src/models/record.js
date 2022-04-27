@@ -1,32 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const recordSchema = new mongoose.Schema({
-  activity: [
-    {
-      id: {
-        type: String,
-        minlength: [5],
-        maxLength: [6],
-      },
-      name: {
-        type: String,
-        minlength: [3],        
-      },
-      src: {
-        type: String,
-        minlength: [17],
-      },
-      type: {
-        type: String,        
-      },
-    },
-  ],
-  actDate: { type: String, length:[10] },
-  quantity: { type: String, minlength: [3, "Quantity should contains at least 3 char"] },
-  duration: { type: String, } ,
-  timestamp: { type: Date }
+  activity: { type: String, minlength: [3, 'Activity name should contains at least 3 char'] },
+  date: { type: Date },
+  duration: { type: String, min: [0, 'Duration must be at least 0'] },
+  kcal: { type: Number, min: [0, 'Calories must be at least 0'] },
+  distance: { type: String }, min: [0, 'Distance must be at least 0']
 });
 
-const RecordModel = mongoose.model("Record", recordSchema, "records");
+const RecordModel = mongoose.model('Record', recordSchema, 'records');
 
 module.exports = RecordModel;
