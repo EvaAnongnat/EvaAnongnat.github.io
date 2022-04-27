@@ -1,26 +1,41 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const cors = require('cors');
-const config = require('../src/config-example');
+const mongoose = require('mongoose');
 
-
+const PORT = process.env.PORT || 4000;
+const config = require('../src/config');
 
 const userRouter = require('../src/routes/user');
 
 const app = express();
-app.use(async (req, res, next) => {
+
+if (config.isVercel) {
+  app.use(async (req, res, next) => {
     await mongoose.connect(config.mongoUri, config.mongoOptions);
     return next();
-});
+  });
+}
+
+// Body parser to parse json in request body for us
 app.use(bodyParser.json());
+// CORS
 app.use(
-    cors({
-        origin: '*',
-        optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-    })
+  cors({
+    origin: '*',
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  })
 );
 
+// Our routers
 app.use('/users', userRouter);
+
+
+app.get('/', (req, res) =>  {
+  res.send("App is running!");
+})
+
+
+
 
 module.exports = app;

@@ -1,16 +1,19 @@
-
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const app = require("../api/index");
-const PORT = process.env.PORT || 4000;
-const config = require('./config-example');
+
+const config = require("./config");
+
+
+
+
 const boot = async () => {
   // Connect to mongodb
+
   await mongoose.connect(config.mongoUri, config.mongoOptions);
   // Start express server
-  app.listen(PORT, () => {
-    console.log('Server is running');
+  app.listen(config.port, () => {
+    console.log(`Server is listening on port ${config.port}`);
   });
 };
 
-boot();
-module.exports = app;
+boot(); 

@@ -9,14 +9,17 @@
  * But it's much harder to read and edit
  * I suggest using mongoUri as below and pass other things as options
  **/
+ require('dotenv').config();
 
  module.exports = {
-  mongoUri: 'mongodb+srv://cluster0.2vhop.mongodb.net',
-  mongoOptions: {
-    user: 'workoutio',
-    pass: 'workoutio',
-    dbName: 'workoutio',
-    retryWrites: true,
-    w: 'majority',
-  },
-};
+   isVercel: process.env.IS_VERCEL || false,
+   port: process.env.PORT || 4001,
+   mongoUri: process.env.MONGO_URI,
+   mongoOptions: {
+     user: process.env.MONGO_USER,
+     pass: process.env.MONGO_PASSWORD,
+     dbName: process.env.MONGO_DATABASE,
+     retryWrites: true,
+     w: 'majority',
+   },
+ };
