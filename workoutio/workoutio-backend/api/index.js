@@ -1,41 +1,34 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const mongoose = require('mongoose');
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const RecordModel = require("../src/models/records");
 
-const PORT = process.env.PORT || 4000;
-const config = require('../src/config');
-
-const userRouter = require('../src/routes/user');
+require('dotenv').config();
+const config = require("../src/config");
 
 const app = express();
+const PORT = config.port;
 
+// const recordRouter = require("./routes/records");
+const route = require("../src/routes/user");
+
+
+// if (config.isVercel) {
 if (config.isVercel) {
   app.use(async (req, res, next) => {
     await mongoose.connect(config.mongoUri, config.mongoOptions);
     return next();
   });
 }
-
-// Body parser to parse json in request body for us
 app.use(bodyParser.json());
-// CORS
 app.use(
   cors({
-    origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    origin: "*",
+    optionsSuccessStatus: 200,
   })
 );
 
-// Our routers
-app.use('/users', userRouter);
-
-
-app.get('/', (req, res) =>  {
-  res.send("App is running!");
-})
-
-
-
+app.use("/users", route);
 
 module.exports = app;
