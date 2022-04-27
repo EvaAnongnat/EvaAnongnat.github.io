@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const app = require("../api/index");
 const PORT = process.env.PORT || 4000;
-const config = require('./src/config-example');
+const config = require('./config-example');
 const boot = async () => {
   // Connect to mongodb
   await mongoose.connect(config.mongoUri, config.mongoOptions);
