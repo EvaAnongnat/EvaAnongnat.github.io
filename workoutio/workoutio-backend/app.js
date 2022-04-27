@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const PORT = process.env.PORT || 4000;
-const config = require('./config-example');
+const config = require('./src/config-example');
 
-const userRouter = require('./routes/user');
+const userRouter = require('./src/routes/user');
 
 const app = express();
 
