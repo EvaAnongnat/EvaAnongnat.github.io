@@ -11,11 +11,11 @@
  **/
 
 module.exports = {
-  mongoUri: 'mongodb+srv://your-project.your-id.mongodb.net',
+  mongoUri: 'mongodb+srv://cluster0.2vhop.mongodb.net',
   mongoOptions: {
-    user: 'your-username',
-    pass: 'your-password',
-    dbName: 'your-database',
+    user: 'workoutio',
+    pass: 'workoutio',
+    dbName: 'workoutio',
     retryWrites: true,
     w: 'majority',
   },
