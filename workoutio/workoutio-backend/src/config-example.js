@@ -10,7 +10,7 @@
  * I suggest using mongoUri as below and pass other things as options
  **/
 
-module.exports = {
+ module.exports = {
   mongoUri: 'mongodb+srv://cluster0.2vhop.mongodb.net',
   mongoOptions: {
     user: 'workoutio',
