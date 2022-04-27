@@ -1,0 +1,39 @@
+.custom-btn {
+    font-family: 'Quicksand', sans-serif;
+    border: solid 1px;
+    border-radius: 2rem;
+    background: #f85f6a;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    cursor: pointer;
+    max-width: 400px;
+  }
+.custom-btn:hover {
+  transition: all 0.2s ease-in-out;
+        background: #FFF;
+        color: #F85F6A;
+        border: solid 1px;
+        border-color: #f85f6a;
+}
+
+@media screen and (max-width: 640px) {
+  .custom-btn {
+    font-family: 'Quicksand', sans-serif;
+    border: solid 1px;
+    border-radius: 1.5rem;
+    background: #f85f6a;
+    color: #fff;
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    cursor: pointer;
+    max-width: 300px;
+      
+  } 
+}

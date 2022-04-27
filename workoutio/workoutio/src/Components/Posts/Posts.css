@@ -1,0 +1,118 @@
+/* .post {
+    display: flex;
+    justify-content: center;
+} */
+.main {
+    padding: 0.5rem calc((100vw - 1500px) /2);
+}
+
+.Post_delete {
+    font-family: 'Quicksand', sans-serif;
+    border: solid 1px;
+    border-radius: 1.5rem;
+    background: #f85f6a;
+    color: #fff;
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+    cursor: pointer;
+    max-width: 100px;
+}
+
+.Post_delete:hover {
+    transition: all 0.2s ease-in-out;
+        background: #FFF;
+        color: #F85F6A;
+        border: solid 1px;
+        border-color: #f85f6a;
+}
+
+table {
+    /* border: 1px solid #ccc; */
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-weight: 600;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    /* background-color: #f8f8f8; */
+    border-bottom: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    color: #f85f6a;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  table td {
+      color: #35424A;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #f85f6a;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }

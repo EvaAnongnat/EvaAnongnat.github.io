@@ -1,0 +1,38 @@
+import {useNavigate} from "react-router-dom";
+
+<nav className="nav-bar-scetion">
+     <div className="desktop-view">
+       <div className="all-desktop-menu">
+         {/* LOGO & NAME */}
+         <div className="header-name-n-logo">
+           <img
+             className=""
+             src="images/ic-logo.svg"
+             alt="logo"
+             style={{ height: 32 }}
+           />
+         </div>
+         <ul className="nav desktop-nav">
+           <li onClick={() => navigate("/")}>Home</li>
+           <li onClick={() => navigate("/")}>Activities</li>
+           <li onClick={() => navigate("/")}>History</li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+
+const NavBar = () => {
+  const navigate = useNavigate();
+return (
+ <nav className="nav-bar-scetion">
+   <div className="desktop-view">
+       <ul className="nav-desktop-nav">
+         <li onClick={() => navigate("/")}>Profile</li>
+         <li onClick={() => navigate("/")}>Activity</li>
+         <li onClick={() => navigate("/")}>History</li> {/*"/activities"*/}
+         <li onClick={() => navigate("/")}>Settings</li>
+       </ul>
+     </div>
+ </nav>
+);
+}
