@@ -5,7 +5,16 @@ import FormInput from "../Input/Input";
 import { useUserRecords } from "../Hooks/Hooks";
 import "./InputActivity.css";
 import axios from "axios";
-
+import Running from '../../Images/athletes/Running.png'
+import Badminton from '../../Images/athletes/Badminton.png'
+import Canoe from '../../Images/athletes/Canoe_Slalom.png';
+import Cycling from '../../Images/athletes/Cycling_Road.png';
+import FootBall from '../../Images/athletes/FootBall.png';
+import Handball from '../../Images/athletes/Handball.png';
+import Karate from '../../Images/athletes/Karate.png';
+import Climbing from '../../Images/athletes/Sport_Climbing.png';
+import Surfing from '../../Images/athletes/Surfing.png';
+import Swimming from '../../Images/athletes/Swimming.png'
 const InputActivity = ({ refreshRecords }) => {
   const [values, setValues] = useState({
     activity: "",
@@ -136,52 +145,52 @@ const InputActivity = ({ refreshRecords }) => {
         </div>
         <div className="icon-box">
           <IconButton
-            src="./images/athletes/Running.png"
+            src={Running}
             alt="Running"
             onClick={running}
           />
           <IconButton
-            src="./images/athletes/Badminton.png"
+            src={Badminton}
             alt="Badminton"
             onClick={badminton}
           />
           <IconButton
-            src="./images/athletes/Canoe_Slalom.png"
+            src={Canoe}
             alt="Canoe_Slalom"
             onClick={canoe}
           />
           <IconButton
-            src="./images/athletes/Cycling_Road.png"
+            src={Cycling}
             alt="Cycling_Road"
             onClick={cycling}
           />
           <IconButton
-            src="./images/athletes/Football.png"
+            src={FootBall}
             alt="Football"
             onClick={football}
           />
           <IconButton
-            src="./images/athletes/Handball.png"
+            src={Handball}
             alt="Handball"
             onClick={handball}
           />
           <IconButton
-            src="./images/athletes/Karate.png"
+            src={Karate}
             alt="Karate"
             onClick={karate}
           />
           <IconButton
-            src="./images/athletes/Sport_Climbing.png"
+            src={Climbing}
             alt="Sport_Climbing"
             onClick={climbing}
           />
           <IconButton
-            src="./images/athletes/Surfing.png"
+            src={Surfing}
             alt="Surfing"
             onClick={surfing}
           />
           <IconButton
-            src="./images/athletes/Swimming.png"
+            src={Swimming}
             alt="Swimming"
             onClick={swimming}
           />
