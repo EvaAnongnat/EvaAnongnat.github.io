@@ -9,7 +9,7 @@ import Running from '../../Images/athletes/Running.png'
 import Badminton from '../../Images/athletes/Badminton.png'
 import Canoe from '../../Images/athletes/Canoe_Slalom.png';
 import Cycling from '../../Images/athletes/Cycling_Road.png';
-import FootBall from '../../Images/athletes/FootBall.png';
+import FootBall from '../../Images/athletes/Football.png';
 import Handball from '../../Images/athletes/Handball.png';
 import Karate from '../../Images/athletes/Karate.png';
 import Climbing from '../../Images/athletes/Sport_Climbing.png';
