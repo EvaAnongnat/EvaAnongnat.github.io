@@ -29,5 +29,7 @@ app.use(
 );
 
 app.use("/users", route);
-
+app.get('/', (req, res) =>  {
+    res.send("Server running");
+  })
 module.exports = app;
