@@ -2,10 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
 const PORT = process.env.PORT || 4001;
 const config = require('../src/config');
-
 const userRouter = require('../src/routes/user');
 
 const app = express();
@@ -27,7 +25,6 @@ app.use(
   })
 );
 
-// Our routers
 app.use('/users', userRouter);
 
 
