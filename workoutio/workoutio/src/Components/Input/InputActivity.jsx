@@ -121,7 +121,7 @@ const InputActivity = ({ refreshRecords }) => {
     };
 
     console.log(valueInputActivity);
-    await axios.post("http://localhost:4000/users/me/records", valueInputActivity);
+    await axios.post("https://workoutio-backend.vercel.app/users/me/records", valueInputActivity);
     refreshRecords();
   };
 

@@ -1,7 +1,7 @@
 import Axios from 'axios' ;
 
 export const client = Axios.create({
-  baseURL: 'http://localhost:4000',
+  baseURL: 'https://workoutio-backend.vercel.app',
 
   validateStatus: (status) => {
       return status >= 200 && status <300;

@@ -8,12 +8,8 @@ const userRouter = require('./routes/user');
 
 const app = express();
 
-if (config.isVercel) {
-  app.use(async (req, res, next) => {
-    await mongoose.connect(config.mongoUri, config.mongoOptions);
-    return next();
-  });
-}
+
+
 
 // Body parser to parse json in request body for us
 app.use(bodyParser.json());
@@ -25,24 +21,28 @@ app.use(
   })
 );
 
-app.use('/users', userRouter);
-
-
-app.get('/', (req, res) =>  {
-  res.send("Server is running");
-})
-
-
-
-
-const boot = async () => {
-  // Connect to mongoDB
+app.use(async (req, res, next) => {
   await mongoose.connect(config.mongoUri, config.mongoOptions);
-  // Start express server
-  app.listen(config.port, () => {
-    console.log(`Server listening on port ${config.port}`);
-  });
-};
+  return next();
+});
+// app.use('/users', userRouter);
 
-boot();
+
+// app.get('/', (req, res) =>  {
+//   res.send("Server is running");
+// })
+
+
+
+
+// const boot = async () => {
+//   // Connect to mongoDB
+//   await mongoose.connect(config.mongoUri, config.mongoOptions);
+//   // Start express server
+//   app.listen(config.port, () => {
+//     console.log(`Server listening on port ${config.port}`);
+//   });
+// };
+
+// boot();
 module.exports = app;

@@ -8,7 +8,7 @@ import "./History.css";
 const History = ({ posts, refreshRecords }) => {
   //TODO: make delete post
     const deletePost = async (recordId) => {
-      await axios.delete(`http://localhost:4000/users/me/records/${recordId}`);
+      await axios.delete(`https://workoutio-backend.vercel.app/users/me/records/${recordId}`);
       refreshRecords();
       // const updatePosts = posts.filter((post) => post.id !== id);
       // setPosts(updatePosts);
