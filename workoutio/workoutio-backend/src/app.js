@@ -2,9 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const PORT = process.env.PORT || 4001;
+
 const config = require('./config');
-const userRouter = require('./routes/user');
+
 
 const app = express();
 
